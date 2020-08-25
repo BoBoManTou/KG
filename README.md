@@ -15,7 +15,7 @@ Corpus processing.py is our file preprocessing program. It uses gensim to extrac
 Relationship matching.py是我们用FB15K_description中三元组test集合对wiki文本进行遍历，以用来匹配wiki文本中同时含有头实体和尾实体的句子。<br>
 Relationship matching.py is where we traverse the wiki text with the test set of triples in FB15K_description to match sentences that contain both a head entity and a tail entity in the wiki text.
 # 1G&959.py
-1G&959.py是Relationship matching.py的一个样例，由于匹配完整的文本关系所需时长比较久。为了便于演示，我们取wiki的前1G文件，并且简化FB15K_description中的三元组test集合，去除相同关系的三元组之后，有959个三元组文件。用得到的这个1G和959的三元组文件的头实体和尾实体进行遍历匹配。1G.txt文件下载地址：链接: [百度云](https://pan.baidu.com/s/1Xnctz8C0PtL7Skzly8L9_Q) 提取码: myhu<br>
+1G&959.py是Relationship matching.py的一个样例，由于匹配完整的文本关系所需时长比较久。为了便于演示，我们取wiki的前1G文件，并且简化FB15K_description中的三元组test集合，去除相同关系的三元组之后，有959个三元组文件。用得到的这个1G和959的三元组文件的头实体和尾实体进行遍历匹配。1G.txt文件下载地址：链接: [百度云] (https://pan.baidu.com/s/1Xnctz8C0PtL7Skzly8L9_Q) 提取码: myhu<br>
 1G&959.py is an example of Relationship matching.py, because it takes a long time to match a complete text relationship. For demonstration purposes, we take the first 1G files of the wiki and simplify the test set of triples in FB15K_description. After removing the triples with the same relationship, there are 959 triple files. Use the head entity and tail entity of the 1G and 959 triple files to traverse and match.link:[Baidu Netdisk](https://pan.baidu.com/s/1Xnctz8C0PtL7Skzly8L9_Q)Extraction code:myhu<br>
 # TEST1.xlsx
 为了方便计算，我们对其简化FB15K_description中的三元组test.txt，去除相同关系的三元组之后，有959个三元组文件，并对它进行由txt文件转换为xlsx格式，以方便查看。<br>
