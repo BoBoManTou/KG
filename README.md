@@ -23,4 +23,9 @@ For the convenience of calculation, we simplify the triplet test.txt in FB15K_de
 # 1G&959.xlsx
 它是1G&959.py运行的输出文件，第一列是关系，第二列是匹配相对应关系实体的wiki句子数目，后面的列是详细的句子。<br>
 It is the output file of 1G&959.py. The first column is the relationship, the second column is the number of wiki sentences matching the corresponding relationship entity, and the following column is the detailed sentence.
-
+# 1G&959_Text filter.py
+它主要的工作是在词汇层面针对每个关系的文本，进行去除停用词（其中三元组中对应的头实体、尾实体也当作停用词），英文大写转小写，进行词形还原的工作。采用的数据集输入依旧是1G&959.xlsx和TEST1.xlsx。输出是过滤之后的1G&959_Text filter.xlsx的文件。<br>
+Its main work is to remove stop words at the vocabulary level for the text of each relationship (the corresponding head entity and tail entity in the triple are also used as stop words), convert English uppercase to lowercase, and perform morphological restoration work. The data set input used is still 1G&959.xlsx and TEST1.xlsx. The output is the filtered 1G&959_Text filter.xlsx file.
+# 1G&959_Text filter.xlsx
+1G&959_Text filter.py的输出文件。<br>
+1G&959_Text filter.py output file.
