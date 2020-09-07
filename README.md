@@ -9,7 +9,7 @@ Download the enwiki-latest-pages-articles.xml.bz2 dataset at [Wikipedia](https:/
 在[三元组实体、关系集](https://github.com/thunlp/DKRL)下载DATA文件，里面含有FB15K、FB20K等文件，下载[映射文件](http://storage.googleapis.com/freebase-public/fb2w.nt.gz)。<br>
 Download the DATA file in [Triple Entity, Relation Set](https://github.com/thunlp/DKRL), which contains FB15K, FB20K and other files, download [mapping file](http://storage.googleapis.com/freebase-public/fb2w.nt.gz).
 # Corpus processing.py
-Corpus processing.py是我们进行文件预处理的程序，利用gensim进行数据抽取，获取英文文本txt版，并去除一些杂文和无关语句，输出合适的wiki文本。<br>
+Corpus processing.py是我们进行文件预处理的程序，利用gensim进行数据抽取，获取英文文本txt版，并去除一些杂文和无关语句，输出合适的wiki文本，输出文件为New-wiki.txt<br>
 Corpus processing.py is our file preprocessing program. It uses gensim to extract data, get the txt version of English text, remove some essays and irrelevant sentences, and output appropriate wiki text.
 # Relationship matching.py
 Relationship matching.py是我们用FB15K_description中三元组test集合对wiki文本进行遍历，以用来匹配wiki文本中同时含有头实体和尾实体的句子。<br>
