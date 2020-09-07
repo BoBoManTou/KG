@@ -26,6 +26,7 @@ w = tqdm(wiki, desc=u'已获取0篇文章')
 for d in w:
     if not re.findall('^[a-zA-Z]+:', d[0]) and d[0] and not re.findall(u'^#', d[1]):
         s = wiki_replace(d)
+
         f.write(s+'\n\n\n')
         i += 1
         if i % 100 == 0:
@@ -43,10 +44,10 @@ f.close()
 
 
 
-#一句话为一行，输出到new2-wiki.txt
+#一句话为一行，并且删除多余的空白行 输出到New-wiki.txt
 def cut_sentences(content):
-    # 结束符号
-    end_flag = ['?', '!', '.', '？', '！', '。', '…']
+    # 结束符号，包含中文和英文的
+    end_flag = ['?', '!', '.', '…']
     content_len = len(content)
     sentences = []
     tmp_char = ''
@@ -66,9 +67,22 @@ def cut_sentences(content):
                 tmp_char = ''
     return sentences
 
-
 f = codecs.open('new2-wiki.txt', 'w', encoding='utf-8')
 for line in  tqdm(open("new-wiki.txt", "r", encoding="utf-8") ):
+    sentences = cut_sentences(line)
+    a='\n'.join(sentences)
+    f.write(a)
+f.close()
+
+
+f = codecs.open('New-wiki.txt', 'w', encoding='utf-8')
+
+for line in  tqdm(open("new-wiki.txt", "r", encoding="utf-8") ):
+    data = line.split()
+    if len(data)<=1:
+        continue
+    if line == '\n':
+        continue;
     sentences = cut_sentences(line)
     a='\n'.join(sentences)
     f.write(a)
